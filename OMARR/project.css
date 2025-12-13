@@ -1,0 +1,963 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('fonts/RoinertPixels-1jYKe.ttf') format('truetype');
+}
+
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    /* background-image: url("image1.png");
+    background-size: cover;       
+    background-repeat: no-repeat;  
+    background-attachment: fixed;  
+    background-position: center;    */
+}
+
+.header{
+    position:fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 4rem 15%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+#menu-icon{
+    font-size: 3.5rem;
+    display: none;
+}
+.logo {
+    font-size: 3rem;
+    color: #ffffff; /* Solid white for Dev */
+    font-weight: 900;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+    opacity: 0.7;
+
+}
+
+.logo span {
+    background: linear-gradient(90deg, #00AEEF, #FF007F, #00FF94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    animation: glow 4s infinite linear;
+}
+span{
+    background: linear-gradient(90deg, #00AEEF, #FF007F, #00FF94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    animation: glow 40s infinite linear;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 4px #649fdd, 0 0 0px #00AEEF;
+    }
+    33% {
+        text-shadow: 0 0 4px #d25e98, 0 0 0px #9648c3;
+    }
+    66% {
+        text-shadow: 0 0 4px #f4fa41, 0 0 0px #00FF94;
+    }
+    100% {
+        text-shadow: 0 0 4px #00AEEF, 0 0 0px #00AEEF;
+    }
+}
+
+.navbar a {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-left: 4rem;
+  font-weight: 700;
+  transition: 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+  padding-bottom: 3px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background: linear-gradient(90deg, #00AEEF, #FF007F, #00FF94);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 4s infinite linear;
+  border-bottom: 3px solid #00AEEF;
+}
+
+/* Keep underline on the active link */
+.navbar a.active {
+  border-bottom: 3px solid #00AEEF;
+}
+
+
+.gradient-btn{
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 1.3rem 1.7rem;
+    border-radius: 3rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #00AEEF, #FF007F, #00FF94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 4s infinite linear; 
+    transition: 0.3s ease-in-out;
+    text-wrap: nowrap;
+}
+.gradient-btn:hover{
+    transform: scale(1,1);
+    opacity: 0.9;
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 15%;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15rem;
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: left;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('fonts/RoinertPixels-1jYKe.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'MyCustomFontt';
+  src: url('fonts/Newretrostyle3d-ygjm.ttf') format('truetype');
+}
+
+.home-content h1 span {
+  font-family: 'MyCustomFont', sans-serif;
+}
+
+
+.home-content h1{
+    font-size: 8rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+    color: white;
+}
+
+.home-content h3{
+    margin: 1rem 0;
+    font-size: 4rem;
+    color: white;
+}
+
+.home-content p{
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.8;
+    color: white;
+}
+
+.home-img img {
+    width: 32vw;
+    height: 32vw;
+    background: #333333;
+    border-radius: 50%;
+    box-shadow: 0 0 22px gray;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+    /* Add the animation */
+    animation: beatShine 2.7s infinite ease-in-out;
+}
+
+/* Define the glowing animation */
+@keyframes beatShine {
+    0% {
+        box-shadow: 0 0 22px gray;
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 40px white, 0 0 80px gray, 0 0 120px gray;
+        transform: scale(1.05);
+    }
+    100% {
+        box-shadow: 0 0 22px gray;
+        transform: scale(1);
+    }
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    margin: 3rem 0.5rem;
+    transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover{
+    box-shadow: 0 0 50px gray;
+    background: linear-gradient(90deg, #00AEEF, #FF007F, #00FF94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 4s infinite linear; 
+    transition: 0.3s ease-in-out;
+}
+.btn-group{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: white;
+    box-shadow: gray;
+    border-radius: 3rem;
+    font-size: 1.8rem;
+    color: rgb(23, 23, 23);
+    border: 2px solid transparent;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+}
+.btn:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px white,
+    0 0 50px gray;
+}
+
+.btn-group a:nth-of-type(2){
+    background-color: rgb(23, 23, 23);
+    color: white;
+    border: 2px solid #333333;
+    box-shadow: 0 0 25px transparent;
+}
+.btn-group a:nth-of-type(2):hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px white,
+    0 0 50px gray;
+}
+
+
+footer{
+    position: relative;
+    width: 100%;
+    background: #000000;
+    min-height: 50px;
+    padding: 10px 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .social-iconss{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+footer .social-iconss a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    margin: 3rem 0.5rem;
+    transition: 0.3s ease-in-out;
+}
+
+footer .menu li{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social-iconss a:hover,
+footer .menu li a:hover{
+   transform: translateY(-10px);
+   opacity: 0.9;
+}
+
+.menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+footer .menu li a{
+    font-size: 1.6em;
+    font-weight: 600;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+footer p{
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 15px;
+  
+}
+
+.video {
+  width: 100%;
+  height: 100vh; /* full screen height, optional — you can remove it if not needed */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black; /* fallback background */
+}
+
+.video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* makes it fill the whole section nicely */
+  border: none;
+  outline: none;
+}
+
+
+select.contact-inputs {
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#click-hint {
+  color: #aaa;
+  font-size: 1.7rem;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+
+
+/*Projects page*/
+
+.games h1{
+    /* font-family: 'MyCustomFont', sans-serif;  */
+    font-size: 5rem;
+    /* color: #e0e2e3; */
+    margin-top: 100px;
+    text-align: center;
+    background: linear-gradient(90deg, #00AEEF, #FF007F, #00FF94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 4s infinite linear; 
+    transition: 0.3s ease-in-out;
+    text-wrap: nowrap;
+}
+
+.games hr {
+    width: 3px;              /* makes it thin and vertical */
+    height: 750px;           /* the height of the line */
+    background-color: white; /* or any color you want */
+    border: none;            /* remove the default border */
+    margin: 20px auto;       /* centers it vertically in the section */
+}
+
+
+.yeat-game h3{
+    font-family: 'MyCustomFont', sans-serif; 
+    text-align: left;
+    font-size: 3rem;
+    color:#ffffff;
+    margin-top: 100px;
+}
+
+.ball-game h3{
+    font-family: 'MyCustomFont', sans-serif; 
+    text-align: left;
+    font-size: 3rem;
+    color:#ffffff;
+    margin-top: 100px;
+}
+
+.yeat-game img {
+    width: 450px;
+    margin-top: 30px;
+    border-radius: 30%;
+    cursor: pointer;
+    transition: transform 0.7s ease-in-out; /* smooth zoom */
+}
+
+.yeat-game img:hover {
+    transform: scale(1.1); /* makes the image 10% larger */
+}
+
+.yeat-game {
+    display: flex;
+    flex-direction: column; /* stacks items vertically */
+    align-items: center;    /* centers them horizontally (optional) */
+    text-align: center;     /* centers the text */
+    gap: 15px;              /* adds spacing between elements */
+}
+
+.yeat-game p {
+    font-family: 'MyCustomFont', sans-serif; 
+    max-width: 800px;       /* optional: limits paragraph width for readability */
+    line-height: 1.9;
+    color: rgb(255, 255, 255);  
+    font-size: 1.7rem;          /* match your theme */
+}
+
+.ball-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* keep content on the left */
+    gap: 200px; /* space between content and hr */
+}
+
+.ball-section hr {
+    height: 700px; /* adjust height */
+    border: 1px solid white;
+}
+
+.ball-game {
+    display: flex;
+    align-items: center; /* image and paragraph side by side */
+    color: white;
+    gap: 60px;
+    position: relative;
+}
+
+.ball-icon {
+    width: 450px;
+    margin-top: 30px;
+    border-radius: 30%;
+    cursor: pointer;
+    transition: transform 0.7s ease-in-out; /* smooth zoom */    
+}
+.ball-game img:hover {
+    transform: scale(1.1); /* makes the image 10% larger */
+}
+
+/* Button centered under the image */
+.ball-game .gradient-btnn {
+    position: absolute;
+    bottom: -60px; /* adjust vertical position */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ball-game h3 {
+    font-family: 'MyCustomFont', sans-serif;
+    position: absolute;
+    top: -130px;
+    left: 0;
+}
+
+.ball-game p {
+    font-family: 'MyCustomFont', sans-serif; 
+    max-width: 500px;
+    line-height: 1.9;
+    color: rgb(255, 255, 255);  
+    font-size: 1.8rem;    
+}
+
+
+
+
+
+
+
+.gradient-btnn{
+    font-size: 1.7rem;
+    font-weight: 600;
+    padding: 1.3rem 1.7rem;
+    border-radius: 3rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #00AEEF, #FF007F, #00FF94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 4s infinite linear; 
+    transition: 0.3s ease-in-out;
+    text-wrap: nowrap;
+}
+
+.gradient-btnn:hover{
+    transform: scale(1,1);
+    opacity: 0.9;
+}
+
+.games {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px; /* space between them */
+    flex-wrap: wrap; /* makes it responsive */
+}
+
+.game-title h3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* aligns content to the left */
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.game-icon{
+    width: 500px;
+    margin-top: 30px;
+    border-radius: 40%;
+}
+
+
+/* Section heading */
+.edits h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+}
+
+/* Row title */
+.row-title {
+    font-family: 'MyCustomFontt', sans-serif;
+    font-size: 3rem;
+    color: white;
+    background: linear-gradient(90deg, #00AEEF, #FF007F, #00FF94);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 4s infinite linear; 
+    margin-bottom: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+/* Horizontal line under the title */
+.video-row-wrapper hr {
+    border: 1px solid white;
+    margin-bottom: 35px;
+}
+
+/* Video row: 2 videos side by side */
+.video-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+/* Each video container */
+.rcj {
+    flex: 1 1 48%; /* 2 videos per row */
+    display: flex;
+    flex-direction: column;
+}
+
+.rcj video {
+    width: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.rcj h3 {
+    color: white;
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+.rcj p {
+    opacity: 0;
+    visibility: hidden;
+    color: white;
+    font-size: 1.2rem;
+    transition: opacity 1s ease;
+}
+
+.rcj video:hover + p {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Only for single-video rows */
+.single-video .video-row {
+    justify-content: center; /* center the video */
+}
+
+.single-video .rcj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.single-video .rcj video {
+    width: 900px;        /* smaller width */
+    max-width: 90%;      /* responsive on small screens */
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.single-video .rcj h3 {
+    text-align: center;
+}
+
+.single-video .rcj p {
+    text-align: center;
+}
+ 
+.single-video .video-row-wrapper hr {
+    width: 50%;          /* line shorter than full width */
+    margin: 0 auto 30px; /* center the line */
+}
+
+/* For rows with smaller videos */
+.small-videos .video-row {
+    justify-content: center;
+    
+}
+
+.small-videos .rcj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.small-videos .rcj video {
+    width: 400px;       /* smaller video size */
+    max-width: 90%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.small-videos .rcj h3,
+.small-videos .rcj p {
+    text-align: center;
+}
+
+.small-videos hr {
+    width: 80%;
+    margin: 0 auto 30px;
+}
+
+
+
+.image-slider-wrapper {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.image-slider-wrapper .row-title {
+    font-size: 28px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.image-slider-wrapper hr {
+    width: 100%;
+    margin: 10px auto 30px;
+}
+
+/* Slider container */
+.slider {
+    width: 1200px;
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Slides container */
+.slides {
+    width: 200%;
+    height: 100%;
+    display: flex;
+    transition: 1s ease;
+}
+
+/* Hide radio buttons */
+.slides input {
+    display: none;
+}
+
+/* Each slide */
+.slide {
+    width: 50%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Manual navigation (below image) */
+.manual-nav {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.manual-btn {
+    border: 2px solid white;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.manual-btn:hover {
+    background: white;
+}
+
+/* Slide logic */
+#img1:checked ~ .slide.first {
+    margin-left: 0;
+}
+
+#img2:checked ~ .slide.first {
+    margin-left: -50%;
+}
+
+.gallery-link {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #222;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    cursor: pointer;                /* Makes it clickable */
+    transition: color 0.3s ease;    /* Smooth hover effect */
+}
+
+.gallery-link:hover {
+    color: white;
+}
+
+
+
+.image-slider-wrapper hr{
+    width: 100px;
+    margin: 10px auto 40px;
+    border: none;
+    border-top: 3px solid #ffffff;
+    border-radius: 2px;
+}
+
+/* Medium screens (tablets/laptops) */
+@media (max-width: 1768px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .header {
+        padding: 2rem 5%;
+    }
+
+    /* Show menu icon */
+    #menu-icon {
+        display: block;
+        font-size: 4rem;
+        cursor: pointer;
+        color: white;
+    }
+
+    /* Hide navbar links by default */
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 100%;
+        background: rgba(0,0,0,0.8);
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .navbar a {
+        margin: 2rem 0;
+        font-size: 2.2rem;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    /* Hide hero image for small screens */
+    .home-img img {
+        width: 70%;
+        margin-top: 3rem;
+    }
+
+    /* Make home section stack */
+    .home {
+        flex-direction: column;
+        text-align: center;
+        gap: 5rem;
+        padding: 5rem 2rem;
+    }
+
+    /* Skills icon smaller */
+    .skill-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+    }
+
+    /* Ball section adjustments */
+    .ball-section {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .ball-game {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ball-game .gradient-btnn {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: 15px;
+    }
+
+    .ball-game h3 {
+        position: relative;
+        top: auto;
+        left: auto;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .ball-game p {
+        max-width: 90%;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    /* Yeat game image */
+    .yeat-game img, .ball-game img {
+        width: 300px;
+        max-width: 90%;
+    }
+
+    /* Games container wraps */
+    .games {
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery-link{
+        font-size: 2rem;
+    }
+    
+}
+
+/* Very small screens (phones) */
+@media (max-width: 480px) {
+
+    html {
+        font-size: 40%;
+    }
+
+    .header {
+        padding: 1.5rem 2%;
+    }
+
+    .home-content h1 {
+        font-size: 6rem;
+    }
+
+    .home-content h3 {
+        font-size: 3rem;
+    }
+
+    .home-content p {
+        font-size: 1.5rem;
+    }
+
+    .skill-icon {
+        width: 80px;
+        height: 80px;
+    }
+
+
+    /* Ball section adjustments */
+    .ball-section {
+        gap: 30px;
+    }
+
+    .ball-game img, .yeat-game img {
+        width: 200px;
+    }
+
+    .ball-game p, .yeat-game p {
+        font-size: 1.4rem;
+    }
+
+    .ball-game .gradient-btnn, .yeat-game .gradient-btnn {
+        font-size: 1.4rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .games {
+        gap: 30px;
+    }
+    
+
+}

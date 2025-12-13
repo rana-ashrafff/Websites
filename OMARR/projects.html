@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="logoo (2).png">
+    <title>Omarr</title>
+</head>
+<body>
+
+    <header class="header">
+
+        <a href="#home" class="logo">
+            Omar <span>.Zidan</span>
+            
+
+        </a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="index.html">About</a>
+            <a href="index.html">Skills</a>
+            <a href="index.html">Education</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="index.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="index.html"> Reviews</a>
+        </nav>
+
+        <button class="gradient-btn" onclick="window.location.href='index.html#contact'">Hire Me</button>
+
+    </header>
+
+    <hr>
+
+<section class="games">
+    <h1>My games</h1>
+    <hr>
+    <div class="yeat-game">
+        <h3>The Yeat Game</h3>
+        <img src="yeat.png" class="game-icon">
+        
+        <p>
+            Over the past week, I’ve poured my soul, brain cells, and maybe a few too many energy drinks into creating this masterpiece for you. Yeah, YOU. This game is your front-row ticket to chaos, confusion, and TONKA-level vibes. 
+            It’s all for entertainment purposes (I mean, duh), so loosen up and prepare to have your mind twisted like a Yeat beat drop.
+        </p>
+        <button class="gradient-btnn" onclick="window.location.href='https://omarrxd.itch.io/the-yeat-game'">Download the game</button>
+    </div>
+
+<div class="ball-section">
+    <div class="ball-game">
+        <h3>The Ball Game</h3>
+        <img src="ball.png" class="ball-icon">
+        <button class="gradient-btnn" onclick="window.location.href='https://omarrxd.itch.io/catch-the-mercedes'">Download the game</button>
+        <p>
+            In this physics-based adventure, you control a bouncing ball that must survive a maze of traps,jumps, and moving platforms. 
+            The goal? Get to the finish line while keeping your rhythm and timing perfect. Each level tests your balance and reaction — one mistake, and you’re rolling back
+            to square one!
+        </p>
+    </div>
+    <hr>
+</div>
+
+
+</section>
+
+
+<h1 class="gallery-link" onclick="window.location.href='gallery.html'">
+    Visit Gallery Section to view more projects
+</h1>
+<hr>
+
+
+<footer class="contact" id="contact">
+
+    <div class="social-iconss">
+
+        <a href="mailto:superdevil04655@gmail.com">
+         <i class="bx bxl-gmail"></i>
+        </a>        
+        <a href="https://www.instagram.com/omrr.fx/?utm_source=ig_web_button_share_sheet">
+            <i class="bx bxl-instagram-alt"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/omar-ossama-zidan-b41a11387?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0YIsGFocRcqv6%2BZ2u6c1Zw%3D%3D">
+            <i class="bx bxl-linkedin-square"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@omqrxd ">
+            <i class="bx bxl-tiktok"></i>
+        </a>
+
+        <a href="https://discord.gg/WbAxXNP24p" target="_blank">
+            <i class="bx bxl-discord-alt"></i>
+        </a>        
+
+        <a href="https://www.youtube.com/@omqrxd">
+            <i class="bx bxl-youtube"></i>
+        </a>
+
+        <a href="https://omarrxd.itch.io/" target="_blank">
+        <i class="fa-brands fa-itch-io"></i>
+        </a>
+
+    </div>
+
+    
+
+    <ul class="menu">
+       <li><a href="index.html">Home</a></li>
+       <li><a href="index.html">About</a></li>
+       <li><a href="index.html">Skills</a></li>
+       <li><a href="index.html">Education</a></li>
+       <li><a href="projects.html">Projects</a></li>
+       <li><a href="index.html">Services</a></li>
+       <li><a href="gallery.html">Gallery</a></li>
+       <li><a href="index.html">Reviews</a></li>      
+    </ul>
+    
+    <p> Contact : superdevil04655@gmail.com</p>
+    <p>©2025 Omar.Zidan | All Rights Reserved</p>
+
+</footer>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const omar = document.getElementById('omar-zidan');
+  const audio = new Audio('videos/Yeat-IM-YEAT(Lyrics).mp3');
+  const hint = document.getElementById('click-hint');
+
+  omar.addEventListener('click', function() {
+    audio.currentTime = 0;
+    audio.play().catch(err => console.error(err));
+    hint.style.opacity = '0';
+    hint.style.transition = 'opacity 0.8s ease-out';
+  });
+});
+</script>
+
+<script>
+const menuIcon = document.getElementById("menu-icon");
+const navbar = document.querySelector(".navbar");
+
+menuIcon.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+});
+</script>
+
+
+    
+</body>
+</html>
+
