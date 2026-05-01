@@ -51,7 +51,7 @@
         <!-- Link input instead of File input -->
         <input type="text" id="driveLink" placeholder="Paste Google Drive Share Link here" class="contact-inputs">
         
-        <button class="gradient-btn" onclick="addDriveVideo()">Add to Gallery</button>
+        <button class="gradient-btn" onclick="addDriveVideo()">Add to Projects</button>
     </div>
 
 
@@ -249,7 +249,7 @@ function renderProjects() {
     container.innerHTML = ""; 
 
     const urlParams = new URLSearchParams(window.location.search);
-    const isAdmin = urlParams.get('admin') === 'Omar99';
+    const isAdmin = urlParams.get('admin') === 'omar-123-omar**';
 
     projects.forEach((proj, index) => {
         const deleteBtn = isAdmin ? `<button class="video-delete-btn" onclick="deleteProj(${index})" style="background:red; color:white; border:none; padding:5px 15px; border-radius:5px; cursor:pointer; margin-top:10px;">Remove</button>` : "";
