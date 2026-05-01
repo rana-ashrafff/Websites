@@ -32,11 +32,11 @@
             <a href="projects.html">Projects</a>
         </nav>
 
-        <button class="gradient-btn" onclick="window.location.href='index.html#contact'">Hire Me</button>
+        <a href="index.html#contact" class="btnn" >Hire Me</a>
 
     </header>
 
-    <hr>
+    <!-- <hr> -->
 
 <!-- Row 1 -->
 <!-- Combined Row for side-by-side videos -->
@@ -51,7 +51,7 @@
         <!-- Link input instead of File input -->
         <input type="text" id="driveLink" placeholder="Paste Google Drive Share Link here" class="contact-inputs">
         
-        <button class="gradient-btn" onclick="addDriveVideo()">Add to Projects</button>
+        <button class="gradient-btn" onclick="addDriveVideo()">Add to Gallery</button>
     </div>
 
 
@@ -185,7 +185,7 @@ menu.onclick = () => {
 // --- 2. PAGE LOAD & ADMIN CHECK ---
 window.onload = () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const isAdmin = urlParams.get('admin') === 'omar-123-omar**';
+    const isAdmin = urlParams.get('admin') === 'Omar99';
 
     // Show upload box only if Admin
     if (isAdmin) {
@@ -249,7 +249,7 @@ function renderProjects() {
     container.innerHTML = ""; 
 
     const urlParams = new URLSearchParams(window.location.search);
-    const isAdmin = urlParams.get('admin') === 'omar-123-omar**';
+    const isAdmin = urlParams.get('admin') === 'Omar99';
 
     projects.forEach((proj, index) => {
         const deleteBtn = isAdmin ? `<button class="video-delete-btn" onclick="deleteProj(${index})" style="background:red; color:white; border:none; padding:5px 15px; border-radius:5px; cursor:pointer; margin-top:10px;">Remove</button>` : "";
