@@ -179,7 +179,7 @@ section{
 }
 @font-face {
   font-family: 'MyCustomFontt';
-  src: url('fonts/Inter_18pt-Bold.ttf') format('truetype');
+  src: url('fonts/Inter_18pt-Regular.ttf') format('truetype');
 }
 
 @font-face {
